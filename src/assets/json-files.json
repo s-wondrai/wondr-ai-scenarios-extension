@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Scenario 1",
+    "fileName": "scenario1.json",
+    "description": "This is description for scenario 1",
+    "url": "/assets/scenario1.json"
+  },
+  {
+    "name": "Scenario 2",
+    "fileName": "scenario2.json",
+    "description": "This is description for scenario 2",
+    "url": "/assets/scenario2.json"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "wondr-ai-scenarios-extension",
+  "description": "An extension from WondrAI to provide make.com scenarios",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "host_permissions": ["*://*/"],
+  "permissions": ["storage", "activeTab", "scripting", "downloads"],
+  "action": {
+    "default_popup": "index.html?target=list-jsons"
+  },
+  "background": {
+    "service_worker": "background_runtime.js"
+  },
+  "web_accessible_resources": [{
+    "resources": ["assets/json-files.json"],
+    "matches": ["<all_urls>"]
+  }],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js", "runtime.js"]
+    }
+  ]
+}

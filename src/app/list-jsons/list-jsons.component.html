@@ -1,0 +1,44 @@
+<!--<div>-->
+<!--  <h2>List of JSON Files:</h2>-->
+<!--  <table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>File Name</th>-->
+<!--      <th>Description</th>-->
+<!--      <th>Download</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr *ngFor="let jsonFile of jsonFiles">-->
+<!--      <td>{{ jsonFile.name }}</td>-->
+<!--      <td>{{ jsonFile.description }}</td>-->
+<!--      <td><button (click)="downloadFile(jsonFile.url, jsonFile.fileName)">Download</button></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
+
+
+<div style="align-self: center">
+  <h2>List of JSON Files</h2>
+  <table>
+    <thead>
+    <tr>
+      <th style="padding: 5px"> {{columnNames[0]}} </th>
+      <th style="padding: 5px"> {{columnNames[1]}} </th>
+      <th style="padding: 5px"> {{columnNames[2]}} </th>
+      <th style="padding: 5px"> {{columnNames[3]}} </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let jsonFile of jsonFiles">
+      <td style="padding: 5px">{{ jsonFile.name }}</td>
+      <td style="padding: 5px">{{ jsonFile.fileName }}</td>
+      <td style="padding: 5px">{{ jsonFile.description }}</td>
+      <td style="padding: 5px">{{ jsonFile.paymentGroup }}</td>
+      <td style="padding: 5px"><button (click)="downloadFile(jsonFile.url, jsonFile.fileName)">Download</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
